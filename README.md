@@ -1,7 +1,7 @@
 # SEGA Master System Flash Cartridge Programmer
 
-This flash cartridge programmer is based on an Arduino NANO and is compatible with [Ichigobankai's SMS flash cart PCB](https://github.com/ichigobankai/SMS_PCB_SLOT1-2_2GAL_DIP
-).
+This flash cartridge programmer is based on an Arduino NANO and is compatible with
+[Ichigobankai's SMS flash cart PCB](https://github.com/ichigobankai/SMS_PCB_SLOT1-2_2GAL_DIP).
 
 The Arduino UART is configured for 2,000,000 baud and is used to interface with the user via terminal program such as ExtraPutty, or minicom, etc.
 
@@ -9,16 +9,12 @@ Downloading or uploading cartridge data is achieved using the XMODEM or XMODEM-1
 
 Current user options allow for upload/download of cartridge data. Read/write a byte in the cartridge. Erase and blank-check the flash. Verify flash data with CRC32.
 
-## User Interface
-
-![ExtraPuTTY terminal window showing the SEGA cartridge programmer menu with options for upload, download, read, write, erase, blank-check, and verify operations displayed in white text on a dark background](ExtraPuTTY.png)
-
 ## Cartridge Interface
 
 The cartridge interface is very simple, comprising of the following signals.
 
-* A0-A15 - from Z80 to cartridge connector
-* D0-D7 - bi-directional to/from Z80/cartridge
+* A0-A15 - address bus to the cartridge connector
+* D0-D7 - bidirectional data bus to/from the cartridge
 * _CE - chip enable (active low)
 * _RD - read (active low)
 * _WR - write (active low)
@@ -34,6 +30,8 @@ I also have some spares for sale if you don't want to manufacture a full batch. 
 ![Front side of the printed circuit board for the SEGA Master System flash cartridge programmer.](pcb_front.png)
 
 ![Back side of the printed circuit board for the SEGA Master System flash cartridge programmer.](pcb_back.png)
+
+![Populated PCB of the SEGA Master System flash cartridge programmer.](pcb_populated.png)
 
 ## Bill of Materials (BOM)
 
