@@ -1,0 +1,3 @@
+[submodule "Programmer"]
+	path = Programmer
+	url = git@github.com:iratahack/SMS_Flash_Prog.git
