@@ -55,6 +55,6 @@ https://github.com/ichigobankai/SMS_PCB_SLOT1-2_2GAL_DIP
 
 ## Rev-B Reset Fix
 
-The Rev-A board did not connect the cartridge slot reset signal. Cartridges that require the reset signal to be pulled high may not work correctly with this revision. The Rev-B board addresses this issue. If you already have a Rev-A board you can modify the board as shown in the image below to add the reset signal. The Arduino firmware has already been updated to toggle the reset signal before accessing the cartridge. The Arduino firmware is [Here](Programmer/)
+The Rev-A board did not connect the cartridge slot reset signal. Cartridges that require the reset signal to be pulled high may not work correctly with this revision. The Rev-B board addresses this issue. If you already have a Rev-A board you can modify the board as shown in the image below to add the reset signal. The Arduino firmware has already been updated to toggle the reset signal before accessing the cartridge. The Arduino firmware is [Here](https://github.com/iratahack/SMS_Flash_Prog)
 
 ![Rev-A Reset Modification.](pcb_mod.png)
