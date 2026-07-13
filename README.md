@@ -18,8 +18,9 @@ The cartridge interface is very simple, comprising of the following signals.
 * _CE - chip enable (active low)
 * _RD - read (active low)
 * _WR - write (active low)
+* _RST - reset (active low)
 
-A0-A15 are driven through the 74HC595 shift registers which are connected to the Arduino SPI interface. D0-D7, _CE, _RD, _WR and the shift-register parallel clock are driven directly from Arduino I/O pins.
+A0-A15 are driven through the 74HC595 shift registers which are connected to the Arduino SPI interface. D0-D7, _CE, _RD, _WR, _RST and the shift-register parallel clock are driven directly from Arduino I/O pins.
 
 ## PCB Manufacturing
 
@@ -51,3 +52,9 @@ The following parts are needed to populate the board. All parts should be availa
 The current Arduino source code supports the flash cart from the link below when populated with an SST39SF040 flash device from Microchip Technology. This cart includes a basic memory mapper compatible with the standard SEGA cart mapper using slots 1&2.
 
 https://github.com/ichigobankai/SMS_PCB_SLOT1-2_2GAL_DIP
+
+## Rev-B Reset Fix
+
+The Rev-A board did not connect the cartridge slot reset signal. Cartridges that require the reset signal to be pulled high may not work correctly with this revision. The Rev-B board addresses this issue. If you already have a Rev-A board you can modify the board as shown in the image below to add the reset signal. The Arduino firmware has already been updated to toggle the reset signal before accessing the cartridge. The Arduino firmware is [Here](Programmer/)
+
+![Rev-A Reset Modification.](pcb_mod.png)
