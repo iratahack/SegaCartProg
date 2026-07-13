@@ -3,7 +3,7 @@
 This flash cartridge programmer is based on an Arduino NANO and is compatible with
 [Ichigobankai's SMS flash cart PCB](https://github.com/ichigobankai/SMS_PCB_SLOT1-2_2GAL_DIP).
 
-The Arduino UART is configured for 2,000,000 baud and is used to interface with the user via terminal program such as ExtraPutty, or minicom, etc.
+The Arduino UART is configured for 1,000,000 baud and is used to interface with the user via terminal program such as ExtraPutty, or minicom, etc.
 
 Downloading or uploading cartridge data is achieved using the XMODEM or XMODEM-1K transfer protocol.
 
